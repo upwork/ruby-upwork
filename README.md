@@ -72,7 +72,7 @@ Or install it yourself as:
 ## Usage
 
 1.
-Follow instructions from `Installation` section.
+Follow instructions from the `Installation` section.
 
 2.
 Open `myapp.rb` and type the `consumer_key` and `consumer_secret` that you previously got from the API Center.
