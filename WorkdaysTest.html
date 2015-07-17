@@ -5,7 +5,7 @@
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 
-  <title>Class: SnapshotTest</title>
+  <title>Class: WorkdaysTest</title>
 
   <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -34,8 +34,8 @@
         <div class="section-body">
           <ul>
           
-            <li><a href="./test/test_snapshot_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="test/test_snapshot.rb">test/test_snapshot.rb</a></li>
+            <li><a href="./test/test_workdays_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="test/test_workdays.rb">test/test_workdays.rb</a></li>
           
           </ul>
         </div>
@@ -65,17 +65,9 @@
         <h3 class="section-header">Methods</h3>
         <ul class="link-list">
           
-          <li><a href="#method-i-test_delete">#test_delete</a></li>
-          
-          <li><a href="#method-i-test_delete_by_contract">#test_delete_by_contract</a></li>
-          
-          <li><a href="#method-i-test_get">#test_get</a></li>
+          <li><a href="#method-i-test_get_by_company">#test_get_by_company</a></li>
           
           <li><a href="#method-i-test_get_by_contract">#test_get_by_contract</a></li>
-          
-          <li><a href="#method-i-test_update">#test_update</a></li>
-          
-          <li><a href="#method-i-test_update_by_contract">#test_update_by_contract</a></li>
           
         </ul>
       </div>
@@ -301,7 +293,7 @@
   </div>
 
   <div id="documentation">
-    <h1 class="class">SnapshotTest</h1>
+    <h1 class="class">WorkdaysTest</h1>
 
     <div id="description" class="description">
       
@@ -325,12 +317,12 @@
         <h3 class="section-header">Public Instance Methods</h3>
 
       
-        <div id="test_delete-method" class="method-detail ">
-          <a name="method-i-test_delete"></a>
+        <div id="test_get_by_company-method" class="method-detail ">
+          <a name="method-i-test_get_by_company"></a>
 
           
           <div class="method-heading">
-            <span class="method-name">test_delete</span><span
+            <span class="method-name">test_get_by_company</span><span
               class="method-args">()</span>
             <span class="method-click-advice">click to toggle source</span>
           </div>
@@ -342,89 +334,21 @@
             
 
             
-            <div class="method-source-code" id="test_delete-source">
+            <div class="method-source-code" id="test_get_by_company-source">
 <pre>
-<span class="ruby-comment"># File test/test_snapshot.rb, line 22</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_delete</span>
-  <span class="ruby-identifier">api</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Routers</span><span class="ruby-operator">::</span><span class="ruby-constant">Snapshot</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">get_client_mock</span>)
-  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">api</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">'company'</span>, <span class="ruby-string">'username'</span>, <span class="ruby-string">'20140101'</span>)
+<span class="ruby-comment"># File test/test_workdays.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_by_company</span>
+  <span class="ruby-identifier">api</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Routers</span><span class="ruby-operator">::</span><span class="ruby-constant">Workdays</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">get_client_mock</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">api</span>.<span class="ruby-identifier">get_by_company</span>(<span class="ruby-string">'company'</span>, <span class="ruby-string">'20140101'</span>, <span class="ruby-string">'20140131'</span>, {})
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- test_delete-source -->
+            </div><!-- test_get_by_company-source -->
             
           </div>
 
           
 
           
-        </div><!-- test_delete-method -->
-
-      
-        <div id="test_delete_by_contract-method" class="method-detail ">
-          <a name="method-i-test_delete_by_contract"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">test_delete_by_contract</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="test_delete_by_contract-source">
-<pre>
-<span class="ruby-comment"># File test/test_snapshot.rb, line 37</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_delete_by_contract</span>
-  <span class="ruby-identifier">api</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Routers</span><span class="ruby-operator">::</span><span class="ruby-constant">Snapshot</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">get_client_mock</span>)
-  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">api</span>.<span class="ruby-identifier">delete_by_contract</span>(<span class="ruby-string">'contract'</span>, <span class="ruby-string">'20140101'</span>)
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- test_delete_by_contract-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- test_delete_by_contract-method -->
-
-      
-        <div id="test_get-method" class="method-detail ">
-          <a name="method-i-test_get"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">test_get</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="test_get-source">
-<pre>
-<span class="ruby-comment"># File test/test_snapshot.rb, line 12</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get</span>
-  <span class="ruby-identifier">api</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Routers</span><span class="ruby-operator">::</span><span class="ruby-constant">Snapshot</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">get_client_mock</span>)
-  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">api</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">'company'</span>, <span class="ruby-string">'username'</span>, <span class="ruby-string">'20140101'</span>)
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- test_get-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- test_get-method -->
+        </div><!-- test_get_by_company-method -->
 
       
         <div id="test_get_by_contract-method" class="method-detail ">
@@ -446,10 +370,10 @@
             
             <div class="method-source-code" id="test_get_by_contract-source">
 <pre>
-<span class="ruby-comment"># File test/test_snapshot.rb, line 27</span>
+<span class="ruby-comment"># File test/test_workdays.rb, line 17</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_by_contract</span>
-  <span class="ruby-identifier">api</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Routers</span><span class="ruby-operator">::</span><span class="ruby-constant">Snapshot</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">get_client_mock</span>)
-  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">api</span>.<span class="ruby-identifier">get_by_contract</span>(<span class="ruby-string">'contract'</span>, <span class="ruby-string">'20140101'</span>)
+  <span class="ruby-identifier">api</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Routers</span><span class="ruby-operator">::</span><span class="ruby-constant">Workdays</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">get_client_mock</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">api</span>.<span class="ruby-identifier">get_by_contract</span>(<span class="ruby-string">'1234'</span>, <span class="ruby-string">'20140101'</span>, <span class="ruby-string">'20140131'</span>, {})
 <span class="ruby-keyword">end</span></pre>
             </div><!-- test_get_by_contract-source -->
             
@@ -459,74 +383,6 @@
 
           
         </div><!-- test_get_by_contract-method -->
-
-      
-        <div id="test_update-method" class="method-detail ">
-          <a name="method-i-test_update"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">test_update</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="test_update-source">
-<pre>
-<span class="ruby-comment"># File test/test_snapshot.rb, line 17</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_update</span>
-  <span class="ruby-identifier">api</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Routers</span><span class="ruby-operator">::</span><span class="ruby-constant">Snapshot</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">get_client_mock</span>)
-  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">api</span>.<span class="ruby-identifier">update</span>(<span class="ruby-string">'company'</span>, <span class="ruby-string">'username'</span>, <span class="ruby-string">'20140101'</span>, {})
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- test_update-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- test_update-method -->
-
-      
-        <div id="test_update_by_contract-method" class="method-detail ">
-          <a name="method-i-test_update_by_contract"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">test_update_by_contract</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="test_update_by_contract-source">
-<pre>
-<span class="ruby-comment"># File test/test_snapshot.rb, line 32</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_update_by_contract</span>
-  <span class="ruby-identifier">api</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Routers</span><span class="ruby-operator">::</span><span class="ruby-constant">Snapshot</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">get_client_mock</span>)
-  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">api</span>.<span class="ruby-identifier">update_by_contract</span>(<span class="ruby-string">'contract'</span>, <span class="ruby-string">'20140101'</span>, {})
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- test_update_by_contract-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- test_update_by_contract-method -->
 
       
       </div><!-- public-instance-method-details -->
