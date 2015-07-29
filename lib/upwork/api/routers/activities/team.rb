@@ -54,7 +54,7 @@ module Upwork
           #  team: (String)
           #  params: (Hash)
           def add_activity(company, team, params)
-            @client.post '/otask/v1/tasks/companies/' + company + '/' + team + '/tasks', params
+            @client.post '/otask/v1/tasks/companies/' + company + '/teams/' + team + '/tasks', params
           end
 
           # Update specific oTask/Activity record within a team
@@ -65,7 +65,7 @@ module Upwork
           #  code: (String)
           #  params: (Hash)
           def update_activities(company, team, code, params)
-            @client.put '/otask/v1/tasks/companies/' + company + '/' + team + '/tasks/' + code, params
+            @client.put '/otask/v1/tasks/companies/' + company + '/teams/' + team + '/tasks/' + code, params
           end
 
           # Archive specific oTask/Activity record within a team
@@ -75,7 +75,7 @@ module Upwork
           #  team: (String)
           #  code: (String)
           def archive_activities(company, team, code)
-            @client.put '/otask/v1/tasks/companies/' + company + '/' + team + '/archive/' + code
+            @client.put '/otask/v1/tasks/companies/' + company + '/teams/' + team + '/archive/' + code
           end
 
           # Unarchive specific oTask/Activity record within a team
@@ -85,7 +85,7 @@ module Upwork
           #  team: (String)
           #  code: (String)
           def unarchive_activities(company, team, code)
-            @client.put '/otask/v1/tasks/companies/' + company + '/' + team + '/unarchive/' + code
+            @client.put '/otask/v1/tasks/companies/' + company + '/teams/' + team + '/unarchive/' + code
           end
 
           # Update a group of oTask/Activity records within a company
@@ -107,7 +107,7 @@ module Upwork
                 url = '/' + code;
             end
 
-            @client.get '/otask/v1/tasks/companies/' + company + '/' + team + '/tasks' + url
+            @client.get '/otask/v1/tasks/companies/' + company + '/teams/' + team + '/tasks' + url
           end
 
         end
