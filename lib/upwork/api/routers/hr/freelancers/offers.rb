@@ -47,7 +47,7 @@ module Upwork
               @client.get '/offers/v1/clients/offers/' + reference
             end
             
-            # Get specific offer
+            # Apply specific action
             #
             # Arguments:
             #  reference: (String)

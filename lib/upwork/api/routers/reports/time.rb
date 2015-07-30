@@ -78,7 +78,7 @@ module Upwork
           #  params: (Hash)
           def get_by_freelancer_limited(freelancer_id, params)
             $LOG.i "running " + __method__.to_s
-            @client.get '/timereports/v1/providers/' + freelancer_id, params
+            @client.get '/timereports/v1/providers/' + freelancer_id + '/hours', params
           end
           
           # Generating Freelancer's Specific Reports (with financial info)
