@@ -52,7 +52,7 @@ module Upwork
           # Arguments:
           #  engagement_ref: (String)
           #  params: (Hash)
-          def assign(engagement_ref, params)
+          def assign_to_engagement(engagement_ref, params)
             @client.put '/tasks/v2/tasks/contracts/' + engagement_ref
           end
         
