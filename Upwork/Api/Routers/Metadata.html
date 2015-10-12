@@ -67,8 +67,6 @@
           
           <li><a href="#method-c-new">::new</a></li>
           
-          <li><a href="#method-i-get_categories">#get_categories</a></li>
-          
           <li><a href="#method-i-get_categories_v2">#get_categories_v2</a></li>
           
           <li><a href="#method-i-get_reasons">#get_reasons</a></li>
@@ -374,40 +372,6 @@
         <h3 class="section-header">Public Instance Methods</h3>
 
       
-        <div id="get_categories-method" class="method-detail ">
-          <a name="method-i-get_categories"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">get_categories</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Get categories</p>
-            
-
-            
-            <div class="method-source-code" id="get_categories-source">
-<pre>
-<span class="ruby-comment"># File lib/upwork/api/routers/metadata.rb, line 31</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_categories</span>
-  <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
-  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">'/profiles/v1/metadata/categories'</span>
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- get_categories-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- get_categories-method -->
-
-      
         <div id="get_categories_v2-method" class="method-detail ">
           <a name="method-i-get_categories_v2"></a>
 
@@ -427,7 +391,7 @@
             
             <div class="method-source-code" id="get_categories_v2-source">
 <pre>
-<span class="ruby-comment"># File lib/upwork/api/routers/metadata.rb, line 37</span>
+<span class="ruby-comment"># File lib/upwork/api/routers/metadata.rb, line 31</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_categories_v2</span>
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">'/profiles/v2/metadata/categories'</span>
@@ -465,7 +429,7 @@
             
             <div class="method-source-code" id="get_reasons-source">
 <pre>
-<span class="ruby-comment"># File lib/upwork/api/routers/metadata.rb, line 64</span>
+<span class="ruby-comment"># File lib/upwork/api/routers/metadata.rb, line 58</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_reasons</span>(<span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">'/profiles/v1/metadata/reasons'</span>, <span class="ruby-identifier">params</span>;
@@ -499,7 +463,7 @@
             
             <div class="method-source-code" id="get_regions-source">
 <pre>
-<span class="ruby-comment"># File lib/upwork/api/routers/metadata.rb, line 49</span>
+<span class="ruby-comment"># File lib/upwork/api/routers/metadata.rb, line 43</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_regions</span>
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">'/profiles/v1/metadata/regions'</span>
@@ -533,7 +497,7 @@
             
             <div class="method-source-code" id="get_skills-source">
 <pre>
-<span class="ruby-comment"># File lib/upwork/api/routers/metadata.rb, line 43</span>
+<span class="ruby-comment"># File lib/upwork/api/routers/metadata.rb, line 37</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_skills</span>
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">'/profiles/v1/metadata/skills'</span>
@@ -567,7 +531,7 @@
             
             <div class="method-source-code" id="get_tests-source">
 <pre>
-<span class="ruby-comment"># File lib/upwork/api/routers/metadata.rb, line 55</span>
+<span class="ruby-comment"># File lib/upwork/api/routers/metadata.rb, line 49</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_tests</span>
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">'/profiles/v1/metadata/tests'</span>

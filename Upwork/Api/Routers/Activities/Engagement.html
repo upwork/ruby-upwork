@@ -69,6 +69,8 @@
           
           <li><a href="#method-i-assign">#assign</a></li>
           
+          <li><a href="#method-i-assign_to_engagement">#assign_to_engagement</a></li>
+          
           <li><a href="#method-i-get_specific">#get_specific</a></li>
           
         </ul>
@@ -405,6 +407,44 @@ params: (Hash)</pre>
 
           
         </div><!-- assign-method -->
+
+      
+        <div id="assign_to_engagement-method" class="method-detail ">
+          <a name="method-i-assign_to_engagement"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">assign_to_engagement</span><span
+              class="method-args">(engagement_ref, params)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Assign to specific engagement the list of activities</p>
+
+<p>Arguments:</p>
+
+<pre>engagement_ref: (String)
+params: (Hash)</pre>
+            
+
+            
+            <div class="method-source-code" id="assign_to_engagement-source">
+<pre>
+<span class="ruby-comment"># File lib/upwork/api/routers/activities/engagement.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">assign_to_engagement</span>(<span class="ruby-identifier">engagement_ref</span>, <span class="ruby-identifier">params</span>)
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">put</span> <span class="ruby-string">'/tasks/v2/tasks/contracts/'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">engagement_ref</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- assign_to_engagement-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- assign_to_engagement-method -->
 
       
         <div id="get_specific-method" class="method-detail ">

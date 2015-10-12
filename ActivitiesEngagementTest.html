@@ -67,6 +67,8 @@
           
           <li><a href="#method-i-test_assign">#test_assign</a></li>
           
+          <li><a href="#method-i-test_assign_to_engagement">#test_assign_to_engagement</a></li>
+          
           <li><a href="#method-i-test_get_specific">#test_get_specific</a></li>
           
         </ul>
@@ -349,6 +351,40 @@
 
           
         </div><!-- test_assign-method -->
+
+      
+        <div id="test_assign_to_engagement-method" class="method-detail ">
+          <a name="method-i-test_assign_to_engagement"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">test_assign_to_engagement</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="test_assign_to_engagement-source">
+<pre>
+<span class="ruby-comment"># File test/test_activities_engagement.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_assign_to_engagement</span>
+  <span class="ruby-identifier">api</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Routers</span><span class="ruby-operator">::</span><span class="ruby-constant">Activities</span><span class="ruby-operator">::</span><span class="ruby-constant">Engagement</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">get_client_mock</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">api</span>.<span class="ruby-identifier">assign_to_engagement</span>(<span class="ruby-string">'1234'</span>, {})
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- test_assign_to_engagement-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- test_assign_to_engagement-method -->
 
       
         <div id="test_get_specific-method" class="method-detail ">

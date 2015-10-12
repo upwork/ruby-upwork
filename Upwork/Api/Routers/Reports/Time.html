@@ -521,7 +521,7 @@ params: (Hash)</pre>
 <span class="ruby-comment"># File lib/upwork/api/routers/reports/time.rb, line 79</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_by_freelancer_limited</span>(<span class="ruby-identifier">freelancer_id</span>, <span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
-  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">'/timereports/v1/providers/'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">freelancer_id</span>, <span class="ruby-identifier">params</span>
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">'/timereports/v1/providers/'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">freelancer_id</span> <span class="ruby-operator">+</span> <span class="ruby-string">'/hours'</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
             </div><!-- get_by_freelancer_limited-source -->
             
