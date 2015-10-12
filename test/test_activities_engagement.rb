@@ -18,4 +18,9 @@ class ActivitiesEngagementTest < Test::Unit::TestCase
     api = Upwork::Api::Routers::Activities::Engagement.new(get_client_mock)
     assert api.assign('company', 'team', '1234', {})
   end
+
+  def test_assign_to_engagement
+    api = Upwork::Api::Routers::Activities::Engagement.new(get_client_mock)
+    assert api.assign_to_engagement('1234', {})
+  end
 end

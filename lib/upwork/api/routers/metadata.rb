@@ -27,12 +27,6 @@ module Upwork
           @client.epoint = ENTRY_POINT 
         end
         
-        # Get categories
-        def get_categories
-          $LOG.i "running " + __method__.to_s
-          @client.get '/profiles/v1/metadata/categories'
-        end
-        
         # Get categories (v2)
         def get_categories_v2
           $LOG.i "running " + __method__.to_s

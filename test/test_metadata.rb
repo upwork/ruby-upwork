@@ -24,11 +24,6 @@ class MetadataTest < Test::Unit::TestCase
     assert api.get_skills
   end
     
-  def test_get_categories
-    api = Upwork::Api::Routers::Metadata.new(get_client_mock)
-    assert api.get_categories
-  end
-    
   def test_get_categories_v2
     api = Upwork::Api::Routers::Metadata.new(get_client_mock)
     assert api.get_categories_v2
