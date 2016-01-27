@@ -37,9 +37,9 @@ module Upwork
         # Arguments:
         #  username: (String)
         #  type: (String)
-        def get_tray_by_type(username, type)
+        def get_tray_by_type(username, type, params = {})
           $LOG.i "running " + __method__.to_s
-          @client.get '/mc/v1/trays/' + username + '/' + type
+          @client.get '/mc/v1/trays/' + username + '/' + type, params
         end
         
         # List thread details based on thread id
