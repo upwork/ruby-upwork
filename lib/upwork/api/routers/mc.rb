@@ -37,6 +37,7 @@ module Upwork
         # Arguments:
         #  username: (String)
         #  type: (String)
+        #  params: (Hash)
         def get_tray_by_type(username, type, params = {})
           $LOG.i "running " + __method__.to_s
           @client.get '/mc/v1/trays/' + username + '/' + type, params
