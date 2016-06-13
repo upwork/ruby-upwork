@@ -1,6 +1,6 @@
 %w[rubygems rake rake/clean rake/testtask fileutils].each { |f| require f }
 $LOAD_PATH << File.dirname(__FILE__) + '/lib'
-require "bundler/gem_tasks"
+require 'bundler/gem_tasks'
 require 'oauth'
 
 Rake::TestTask.new do |t|
