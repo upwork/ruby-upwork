@@ -26,13 +26,14 @@ module Upwork
           @client.epoint = ENTRY_POINT 
         end
         
-        # Retrive rooms information
+        # Retrieve rooms information
         #
         # Arguments:
         #  company: (String)
-        def get_rooms(company)
+        #  params: (Hash)
+        def get_rooms(company, params = {})
           $LOG.i "running " + __method__.to_s
-          @client.get '/messages/v3/' + company + '/rooms'
+          @client.get '/messages/v3/' + company + '/rooms', params
         end
         
         # Get a specific room information
