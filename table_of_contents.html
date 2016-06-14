@@ -116,7 +116,7 @@
     <a href="LoggerTest.html">LoggerTest</a>
   </li>
   <li class="class">
-    <a href="McTest.html">McTest</a>
+    <a href="MessagesTest.html">MessagesTest</a>
   </li>
   <li class="class">
     <a href="MetadataTest.html">MetadataTest</a>
@@ -245,7 +245,7 @@
     <a href="Upwork/Api/Routers/Jobs/Search.html">Upwork::Api::Routers::Jobs::Search</a>
   </li>
   <li class="class">
-    <a href="Upwork/Api/Routers/Mc.html">Upwork::Api::Routers::Mc</a>
+    <a href="Upwork/Api/Routers/Messages.html">Upwork::Api::Routers::Messages</a>
   </li>
   <li class="class">
     <a href="Upwork/Api/Routers/Metadata.html">Upwork::Api::Routers::Metadata</a>
@@ -407,9 +407,9 @@
     <span class="container">Upwork::Api::Routers::Jobs::Search</span>
 
   <li class="method">
-    <a href="Upwork/Api/Routers/Mc.html#method-c-new">::new</a>
+    <a href="Upwork/Api/Routers/Messages.html#method-c-new">::new</a>
     &mdash;
-    <span class="container">Upwork::Api::Routers::Mc</span>
+    <span class="container">Upwork::Api::Routers::Messages</span>
 
   <li class="method">
     <a href="Upwork/Api/Routers/Metadata.html#method-c-new">::new</a>
@@ -520,6 +520,11 @@
     <a href="Upwork/Api/Routers/Hr/Milestones.html#method-i-create">#create</a>
     &mdash;
     <span class="container">Upwork::Api::Routers::Hr::Milestones</span>
+
+  <li class="method">
+    <a href="Upwork/Api/Routers/Messages.html#method-i-create_room">#create_room</a>
+    &mdash;
+    <span class="container">Upwork::Api::Routers::Messages</span>
 
   <li class="method">
     <a href="Upwork/Api/Client.html#method-i-delete">#delete</a>
@@ -792,6 +797,31 @@
     <span class="container">Upwork::Api::Routers::Metadata</span>
 
   <li class="method">
+    <a href="Upwork/Api/Routers/Messages.html#method-i-get_room_by_application">#get_room_by_application</a>
+    &mdash;
+    <span class="container">Upwork::Api::Routers::Messages</span>
+
+  <li class="method">
+    <a href="Upwork/Api/Routers/Messages.html#method-i-get_room_by_contract">#get_room_by_contract</a>
+    &mdash;
+    <span class="container">Upwork::Api::Routers::Messages</span>
+
+  <li class="method">
+    <a href="Upwork/Api/Routers/Messages.html#method-i-get_room_by_offer">#get_room_by_offer</a>
+    &mdash;
+    <span class="container">Upwork::Api::Routers::Messages</span>
+
+  <li class="method">
+    <a href="Upwork/Api/Routers/Messages.html#method-i-get_room_details">#get_room_details</a>
+    &mdash;
+    <span class="container">Upwork::Api::Routers::Messages</span>
+
+  <li class="method">
+    <a href="Upwork/Api/Routers/Messages.html#method-i-get_rooms">#get_rooms</a>
+    &mdash;
+    <span class="container">Upwork::Api::Routers::Messages</span>
+
+  <li class="method">
     <a href="Upwork/Api/Routers/Metadata.html#method-i-get_skills">#get_skills</a>
     &mdash;
     <span class="container">Upwork::Api::Routers::Metadata</span>
@@ -887,31 +917,6 @@
     <span class="container">Upwork::Api::Routers::Metadata</span>
 
   <li class="method">
-    <a href="Upwork/Api/Routers/Mc.html#method-i-get_thread_by_context">#get_thread_by_context</a>
-    &mdash;
-    <span class="container">Upwork::Api::Routers::Mc</span>
-
-  <li class="method">
-    <a href="Upwork/Api/Routers/Mc.html#method-i-get_thread_by_context_last_posts">#get_thread_by_context_last_posts</a>
-    &mdash;
-    <span class="container">Upwork::Api::Routers::Mc</span>
-
-  <li class="method">
-    <a href="Upwork/Api/Routers/Mc.html#method-i-get_thread_details">#get_thread_details</a>
-    &mdash;
-    <span class="container">Upwork::Api::Routers::Mc</span>
-
-  <li class="method">
-    <a href="Upwork/Api/Routers/Mc.html#method-i-get_tray_by_type">#get_tray_by_type</a>
-    &mdash;
-    <span class="container">Upwork::Api::Routers::Mc</span>
-
-  <li class="method">
-    <a href="Upwork/Api/Routers/Mc.html#method-i-get_trays">#get_trays</a>
-    &mdash;
-    <span class="container">Upwork::Api::Routers::Mc</span>
-
-  <li class="method">
     <a href="Upwork/Api/Routers/Auth.html#method-i-get_user_info">#get_user_info</a>
     &mdash;
     <span class="container">Upwork::Api::Routers::Auth</span>
@@ -942,11 +947,6 @@
     <span class="container">Upwork::Api::Routers::Hr::Clients::Offers</span>
 
   <li class="method">
-    <a href="Upwork/Api/Routers/Mc.html#method-i-mark_thread">#mark_thread</a>
-    &mdash;
-    <span class="container">Upwork::Api::Routers::Mc</span>
-
-  <li class="method">
     <a href="Upwork/Api/Client.html#method-i-post">#post</a>
     &mdash;
     <span class="container">Upwork::Api::Client</span>
@@ -967,11 +967,6 @@
     <span class="container">Upwork::Api::Routers::Hr::Submissions</span>
 
   <li class="method">
-    <a href="Upwork/Api/Routers/Mc.html#method-i-reply_to_thread">#reply_to_thread</a>
-    &mdash;
-    <span class="container">Upwork::Api::Routers::Mc</span>
-
-  <li class="method">
     <a href="Upwork/Api/Routers/Hr/Submissions.html#method-i-request_approval">#request_approval</a>
     &mdash;
     <span class="container">Upwork::Api::Routers::Hr::Submissions</span>
@@ -982,9 +977,9 @@
     <span class="container">Upwork::Api::Routers::Hr::Contracts</span>
 
   <li class="method">
-    <a href="Upwork/Api/Routers/Mc.html#method-i-start_new_thread">#start_new_thread</a>
+    <a href="Upwork/Api/Routers/Messages.html#method-i-send_message_to_room">#send_message_to_room</a>
     &mdash;
-    <span class="container">Upwork::Api::Routers::Mc</span>
+    <span class="container">Upwork::Api::Routers::Messages</span>
 
   <li class="method">
     <a href="Upwork/Api/Routers/Payments.html#method-i-submit_bonus">#submit_bonus</a>
@@ -1050,6 +1045,11 @@
     <a href="HrMilestonesTest.html#method-i-test_create">#test_create</a>
     &mdash;
     <span class="container">HrMilestonesTest</span>
+
+  <li class="method">
+    <a href="MessagesTest.html#method-i-test_create_room">#test_create_room</a>
+    &mdash;
+    <span class="container">MessagesTest</span>
 
   <li class="method">
     <a href="ConfigTest.html#method-i-test_delete">#test_delete</a>
@@ -1302,6 +1302,31 @@
     <span class="container">MetadataTest</span>
 
   <li class="method">
+    <a href="MessagesTest.html#method-i-test_get_room_by_application">#test_get_room_by_application</a>
+    &mdash;
+    <span class="container">MessagesTest</span>
+
+  <li class="method">
+    <a href="MessagesTest.html#method-i-test_get_room_by_contract">#test_get_room_by_contract</a>
+    &mdash;
+    <span class="container">MessagesTest</span>
+
+  <li class="method">
+    <a href="MessagesTest.html#method-i-test_get_room_by_offer">#test_get_room_by_offer</a>
+    &mdash;
+    <span class="container">MessagesTest</span>
+
+  <li class="method">
+    <a href="MessagesTest.html#method-i-test_get_room_details">#test_get_room_details</a>
+    &mdash;
+    <span class="container">MessagesTest</span>
+
+  <li class="method">
+    <a href="MessagesTest.html#method-i-test_get_rooms">#test_get_rooms</a>
+    &mdash;
+    <span class="container">MessagesTest</span>
+
+  <li class="method">
     <a href="MetadataTest.html#method-i-test_get_skills">#test_get_skills</a>
     &mdash;
     <span class="container">MetadataTest</span>
@@ -1392,31 +1417,6 @@
     <span class="container">MetadataTest</span>
 
   <li class="method">
-    <a href="McTest.html#method-i-test_get_thread_by_context">#test_get_thread_by_context</a>
-    &mdash;
-    <span class="container">McTest</span>
-
-  <li class="method">
-    <a href="McTest.html#method-i-test_get_thread_by_context_last_posts">#test_get_thread_by_context_last_posts</a>
-    &mdash;
-    <span class="container">McTest</span>
-
-  <li class="method">
-    <a href="McTest.html#method-i-test_get_thread_details">#test_get_thread_details</a>
-    &mdash;
-    <span class="container">McTest</span>
-
-  <li class="method">
-    <a href="McTest.html#method-i-test_get_tray_by_type">#test_get_tray_by_type</a>
-    &mdash;
-    <span class="container">McTest</span>
-
-  <li class="method">
-    <a href="McTest.html#method-i-test_get_trays">#test_get_trays</a>
-    &mdash;
-    <span class="container">McTest</span>
-
-  <li class="method">
     <a href="AuthTest.html#method-i-test_get_user_info">#test_get_user_info</a>
     &mdash;
     <span class="container">AuthTest</span>
@@ -1452,9 +1452,9 @@
     <span class="container">HrClientsOffersTest</span>
 
   <li class="method">
-    <a href="McTest.html#method-i-test_mark_thread">#test_mark_thread</a>
+    <a href="ConfigTest.html#method-i-test_my_config_initialization">#test_my_config_initialization</a>
     &mdash;
-    <span class="container">McTest</span>
+    <span class="container">ConfigTest</span>
 
   <li class="method">
     <a href="ConfigTest.html#method-i-test_post">#test_post</a>
@@ -1477,11 +1477,6 @@
     <span class="container">HrSubmissionsTest</span>
 
   <li class="method">
-    <a href="McTest.html#method-i-test_reply_to_thread">#test_reply_to_thread</a>
-    &mdash;
-    <span class="container">McTest</span>
-
-  <li class="method">
     <a href="HrSubmissionsTest.html#method-i-test_request_approval">#test_request_approval</a>
     &mdash;
     <span class="container">HrSubmissionsTest</span>
@@ -1492,9 +1487,9 @@
     <span class="container">HrContractsTest</span>
 
   <li class="method">
-    <a href="McTest.html#method-i-test_start_new_thread">#test_start_new_thread</a>
+    <a href="MessagesTest.html#method-i-test_send_message_to_room">#test_send_message_to_room</a>
     &mdash;
-    <span class="container">McTest</span>
+    <span class="container">MessagesTest</span>
 
   <li class="method">
     <a href="PaymentsTest.html#method-i-test_submit_bonus">#test_submit_bonus</a>
@@ -1532,6 +1527,16 @@
     <span class="container">SnapshotTest</span>
 
   <li class="method">
+    <a href="MessagesTest.html#method-i-test_update_room_metadata">#test_update_room_metadata</a>
+    &mdash;
+    <span class="container">MessagesTest</span>
+
+  <li class="method">
+    <a href="MessagesTest.html#method-i-test_update_room_settings">#test_update_room_settings</a>
+    &mdash;
+    <span class="container">MessagesTest</span>
+
+  <li class="method">
     <a href="Upwork/Api/Routers/Activities/Team.html#method-i-unarchive_activities">#unarchive_activities</a>
     &mdash;
     <span class="container">Upwork::Api::Routers::Activities::Team</span>
@@ -1555,6 +1560,16 @@
     <a href="Upwork/Api/Routers/Snapshot.html#method-i-update_by_contract">#update_by_contract</a>
     &mdash;
     <span class="container">Upwork::Api::Routers::Snapshot</span>
+
+  <li class="method">
+    <a href="Upwork/Api/Routers/Messages.html#method-i-update_room_metadata">#update_room_metadata</a>
+    &mdash;
+    <span class="container">Upwork::Api::Routers::Messages</span>
+
+  <li class="method">
+    <a href="Upwork/Api/Routers/Messages.html#method-i-update_room_settings">#update_room_settings</a>
+    &mdash;
+    <span class="container">Upwork::Api::Routers::Messages</span>
 </ul>
 </main>
 

@@ -87,6 +87,8 @@
     
     <li ><a href="#method-i-test_get">#test_get</a>
     
+    <li ><a href="#method-i-test_my_config_initialization">#test_my_config_initialization</a>
+    
     <li ><a href="#method-i-test_post">#test_post</a>
     
     <li ><a href="#method-i-test_put">#test_put</a>
@@ -227,6 +229,53 @@
             <pre><span class="ruby-comment"># File test/test_client.rb, line 32</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get</span>
   <span class="ruby-identifier">assert</span> <span class="ruby-identifier">get_client_mock</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&#39;/some/api/url&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_my_config_initialization" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_my_config_initialization</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_my_config_initialization-source">
+            <pre><span class="ruby-comment"># File test/test_config.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_my_config_initialization</span>
+  <span class="ruby-identifier">config</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Config</span>.<span class="ruby-identifier">new</span>({
+    <span class="ruby-string">&#39;consumer_key&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;</span>,
+    <span class="ruby-string">&#39;consumer_secret&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxx&#39;</span>,
+    <span class="ruby-string">&#39;access_token&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;</span>,
+    <span class="ruby-string">&#39;access_secret&#39;</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxx&#39;</span>,
+    <span class="ruby-string">&#39;signature_method&#39;</span>=<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;sig&#39;</span>,
+    <span class="ruby-string">&#39;debug&#39;</span>           =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>
+  })
+  
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;</span>,<span class="ruby-identifier">config</span>.<span class="ruby-identifier">consumer_key</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxx&#39;</span>,<span class="ruby-identifier">config</span>.<span class="ruby-identifier">consumer_secret</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;</span>,<span class="ruby-identifier">config</span>.<span class="ruby-identifier">access_token</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxx&#39;</span>,<span class="ruby-identifier">config</span>.<span class="ruby-identifier">access_secret</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;sig&#39;</span>,<span class="ruby-identifier">config</span>.<span class="ruby-identifier">signature_method</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-keyword">false</span>,<span class="ruby-identifier">config</span>.<span class="ruby-identifier">debug</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
