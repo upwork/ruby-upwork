@@ -1,421 +1,223 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta charset="UTF-8">
 
-  <title>Class: Upwork::Api::Routers::Hr::Interviews</title>
+<title>class Upwork::Api::Routers::Hr::Interviews - RDoc Documentation</title>
 
-  <link rel="stylesheet" href="../../../../rdoc.css" type="text/css" media="screen" />
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../../";
+</script>
 
-  <script src="../../../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../../../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../../../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../../../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/jquery.js"></script>
+<script src="../../../../js/darkfish.js"></script>
 
-</head>
-<body id="top" class="class">
+<link href="../../../../css/fonts.css" rel="stylesheet">
+<link href="../../../../css/rdoc.css" rel="stylesheet">
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="../../../../index.html">Home</a>
-          <a href="../../../../index.html#classes">Classes</a>
-          <a href="../../../../index.html#methods">Methods</a>
-        </h3>
-      </div>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
     </div>
 
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="../../../../lib/upwork/api/routers/hr/interviews_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="lib/upwork/api/routers/hr/interviews.rb">lib/upwork/api/routers/hr/interviews.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
 
-      
-    </div>
-
-    <div id="class-metadata">
-      
-      <!-- Parent Class -->
-      <div id="parent-class-section" class="section">
-        <h3 class="section-header">Parent</h3>
-        
-        <p class="link">Object</p>
-        
-      </div>
-      
-
-      
-
-      
-
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
-          
-          <li><a href="#method-c-new">::new</a></li>
-          
-          <li><a href="#method-i-invite">#invite</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="../../../../Gemfile.html">Gemfile</a></li>
-        
-          <li class="file"><a href="../../../../LICENSE_txt.html">LICENSE.txt</a></li>
-        
-          <li class="file"><a href="../../../../Rakefile.html">Rakefile</a></li>
-        
-        </ul>
-      </div>
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="../../../../images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="../../../../Upwork.html">Upwork</a></li>
-        
-          <li><a href="../../../../Upwork/Api.html">Upwork::Api</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Client.html">Upwork::Api::Client</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Config.html">Upwork::Api::Config</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Logger.html">Upwork::Api::Logger</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers.html">Upwork::Api::Routers</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Activities.html">Upwork::Api::Routers::Activities</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Activities/Engagement.html">Upwork::Api::Routers::Activities::Engagement</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Activities/Team.html">Upwork::Api::Routers::Activities::Team</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Auth.html">Upwork::Api::Routers::Auth</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Freelancers.html">Upwork::Api::Routers::Freelancers</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Freelancers/Profile.html">Upwork::Api::Routers::Freelancers::Profile</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Freelancers/Search.html">Upwork::Api::Routers::Freelancers::Search</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Hr.html">Upwork::Api::Routers::Hr</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Hr/Clients.html">Upwork::Api::Routers::Hr::Clients</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Hr/Clients/Applications.html">Upwork::Api::Routers::Hr::Clients::Applications</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Hr/Clients/Offers.html">Upwork::Api::Routers::Hr::Clients::Offers</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Hr/Contracts.html">Upwork::Api::Routers::Hr::Contracts</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Hr/Engagements.html">Upwork::Api::Routers::Hr::Engagements</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Hr/Freelancers.html">Upwork::Api::Routers::Hr::Freelancers</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Hr/Freelancers/Applications.html">Upwork::Api::Routers::Hr::Freelancers::Applications</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Hr/Freelancers/Offers.html">Upwork::Api::Routers::Hr::Freelancers::Offers</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Hr/Interviews.html">Upwork::Api::Routers::Hr::Interviews</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Hr/Jobs.html">Upwork::Api::Routers::Hr::Jobs</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Hr/Milestones.html">Upwork::Api::Routers::Hr::Milestones</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Hr/Roles.html">Upwork::Api::Routers::Hr::Roles</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Hr/Submissions.html">Upwork::Api::Routers::Hr::Submissions</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Jobs.html">Upwork::Api::Routers::Jobs</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Jobs/Profile.html">Upwork::Api::Routers::Jobs::Profile</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Jobs/Search.html">Upwork::Api::Routers::Jobs::Search</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Mc.html">Upwork::Api::Routers::Mc</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Metadata.html">Upwork::Api::Routers::Metadata</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Organization.html">Upwork::Api::Routers::Organization</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Organization/Companies.html">Upwork::Api::Routers::Organization::Companies</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Organization/Teams.html">Upwork::Api::Routers::Organization::Teams</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Organization/Users.html">Upwork::Api::Routers::Organization::Users</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Payments.html">Upwork::Api::Routers::Payments</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Reports.html">Upwork::Api::Routers::Reports</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Reports/Finance.html">Upwork::Api::Routers::Reports::Finance</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Reports/Finance/Accounts.html">Upwork::Api::Routers::Reports::Finance::Accounts</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Reports/Finance/Billings.html">Upwork::Api::Routers::Reports::Finance::Billings</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Reports/Finance/Earnings.html">Upwork::Api::Routers::Reports::Finance::Earnings</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Reports/Time.html">Upwork::Api::Routers::Reports::Time</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Snapshot.html">Upwork::Api::Routers::Snapshot</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Teams.html">Upwork::Api::Routers::Teams</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Workdays.html">Upwork::Api::Routers::Workdays</a></li>
-        
-          <li><a href="../../../../Upwork/Api/Routers/Workdiary.html">Upwork::Api::Routers::Workdiary</a></li>
-        
-          <li><a href="../../../../ActivitiesEngagementTest.html">ActivitiesEngagementTest</a></li>
-        
-          <li><a href="../../../../ActivitiesTeamTest.html">ActivitiesTeamTest</a></li>
-        
-          <li><a href="../../../../AuthTest.html">AuthTest</a></li>
-        
-          <li><a href="../../../../ConfigTest.html">ConfigTest</a></li>
-        
-          <li><a href="../../../../FreelancersProfileTest.html">FreelancersProfileTest</a></li>
-        
-          <li><a href="../../../../FreelancersSearchTest.html">FreelancersSearchTest</a></li>
-        
-          <li><a href="../../../../HrClientsApplicationsTest.html">HrClientsApplicationsTest</a></li>
-        
-          <li><a href="../../../../HrClientsOffersTest.html">HrClientsOffersTest</a></li>
-        
-          <li><a href="../../../../HrContractsTest.html">HrContractsTest</a></li>
-        
-          <li><a href="../../../../HrEngagementsTest.html">HrEngagementsTest</a></li>
-        
-          <li><a href="../../../../HrFreelancersApplicationsTest.html">HrFreelancersApplicationsTest</a></li>
-        
-          <li><a href="../../../../HrFreelancersOffersTest.html">HrFreelancersOffersTest</a></li>
-        
-          <li><a href="../../../../HrInterviewsTest.html">HrInterviewsTest</a></li>
-        
-          <li><a href="../../../../HrJobsTest.html">HrJobsTest</a></li>
-        
-          <li><a href="../../../../HrMilestonesTest.html">HrMilestonesTest</a></li>
-        
-          <li><a href="../../../../HrRolesTest.html">HrRolesTest</a></li>
-        
-          <li><a href="../../../../HrSubmissionsTest.html">HrSubmissionsTest</a></li>
-        
-          <li><a href="../../../../JobsProfileTest.html">JobsProfileTest</a></li>
-        
-          <li><a href="../../../../JobsSearchTest.html">JobsSearchTest</a></li>
-        
-          <li><a href="../../../../LoggerTest.html">LoggerTest</a></li>
-        
-          <li><a href="../../../../McTest.html">McTest</a></li>
-        
-          <li><a href="../../../../MetadataTest.html">MetadataTest</a></li>
-        
-          <li><a href="../../../../OrganizationCompaniesTest.html">OrganizationCompaniesTest</a></li>
-        
-          <li><a href="../../../../OrganizationTeamsTest.html">OrganizationTeamsTest</a></li>
-        
-          <li><a href="../../../../OrganizationUsersTest.html">OrganizationUsersTest</a></li>
-        
-          <li><a href="../../../../PaymentsTest.html">PaymentsTest</a></li>
-        
-          <li><a href="../../../../ReportsFinanceAccountsTest.html">ReportsFinanceAccountsTest</a></li>
-        
-          <li><a href="../../../../ReportsFinanceBillingsTest.html">ReportsFinanceBillingsTest</a></li>
-        
-          <li><a href="../../../../ReportsFinanceEarningsTest.html">ReportsFinanceEarningsTest</a></li>
-        
-          <li><a href="../../../../ReportsTimeTest.html">ReportsTimeTest</a></li>
-        
-          <li><a href="../../../../SnapshotTest.html">SnapshotTest</a></li>
-        
-          <li><a href="../../../../TeamsTest.html">TeamsTest</a></li>
-        
-          <li><a href="../../../../TestHelper.html">TestHelper</a></li>
-        
-          <li><a href="../../../../WorkdaysTest.html">WorkdaysTest</a></li>
-        
-          <li><a href="../../../../WorkdiaryTest.html">WorkdiaryTest</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
   </div>
 
-  <div id="documentation">
-    <h1 class="class">Upwork::Api::Routers::Hr::Interviews</h1>
+  
 
-    <div id="description" class="description">
-      
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-invite">#invite</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Upwork::Api::Routers::Hr::Interviews">
+  <h1 id="class-Upwork::Api::Routers::Hr::Interviews" class="class">
+    class Upwork::Api::Routers::Hr::Interviews
+  </h1>
+
+  <section class="description">
+    
 <p><a href="Interviews.html">Interviews</a> workflow</p>
 
-    </div><!-- description -->
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
 
     
-    
-    
-    <div id="5Buntitled-5D" class="documentation-section">
-      
 
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
       
-
-      
-      <!-- Constants -->
-      <div id="constants-list" class="section">
-        <h3 class="section-header">Constants</h3>
-        <dl>
+        <dt id="ENTRY_POINT">ENTRY_POINT
         
-          <dt><a name="ENTRY_POINT">ENTRY_POINT</a></dt>
-          
-          <dd class="description"></dd>
-          
+        <dd>
         
-        </dl>
-      </div>
       
+      </dl>
+    </section>
+    
 
-      
+    
 
-      <!-- Methods -->
-      
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
 
-      
-        <div id="new-method" class="method-detail ">
-          <a name="method-c-new"></a>
-
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(client)</span>
           
-          <div class="method-heading">
-            <span class="method-name">new</span><span
-              class="method-args">(client)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
+          <span class="method-click-advice">click to toggle source</span>
           
+        </div>
+        
 
-          <div class="method-description">
-            
-            <p>Init</p>
+        <div class="method-description">
+          
+          <p>Init</p>
 
 <p>Arguments:</p>
 
 <pre>client: (Client)</pre>
-            
+          
+          
 
-            
-            <div class="method-source-code" id="new-source">
-<pre>
-<span class="ruby-comment"># File lib/upwork/api/routers/hr/interviews.rb, line 26</span>
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/upwork/api/routers/hr/interviews.rb, line 26</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">client</span>)
   <span class="ruby-ivar">@client</span> = <span class="ruby-identifier">client</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">epoint</span> = <span class="ruby-constant">ENTRY_POINT</span> 
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- new-source -->
-            
           </div>
-
           
+        </div>
 
-          
-        </div><!-- new-method -->
+        
 
-      
-      </div><!-- public-class-method-details -->
+        
+      </div>
+
     
-      <div id="public-instance-method-details" class="method-section section">
-        <h3 class="section-header">Public Instance Methods</h3>
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
 
-      
-        <div id="invite-method" class="method-detail ">
-          <a name="method-i-invite"></a>
-
+    
+      <div id="method-i-invite" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">invite</span><span
+            class="method-args">(job_key, params)</span>
           
-          <div class="method-heading">
-            <span class="method-name">invite</span><span
-              class="method-args">(job_key, params)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
+          <span class="method-click-advice">click to toggle source</span>
           
+        </div>
+        
 
-          <div class="method-description">
-            
-            <p>Invite to Interview</p>
+        <div class="method-description">
+          
+          <p>Invite to Interview</p>
 
 <p>Arguments:</p>
 
 <pre>job_key: (String)
 params: (Hash)</pre>
-            
+          
+          
 
-            
-            <div class="method-source-code" id="invite-source">
-<pre>
-<span class="ruby-comment"># File lib/upwork/api/routers/hr/interviews.rb, line 36</span>
+          
+          <div class="method-source-code" id="invite-source">
+            <pre><span class="ruby-comment"># File lib/upwork/api/routers/hr/interviews.rb, line 36</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">invite</span>(<span class="ruby-identifier">job_key</span>, <span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
-  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">post</span> <span class="ruby-string">'/hr/v1/jobs/'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">job_key</span> <span class="ruby-operator">+</span> <span class="ruby-string">'/candidates'</span>, <span class="ruby-identifier">params</span>
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">post</span> <span class="ruby-string">&#39;/hr/v1/jobs/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">job_key</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/candidates&#39;</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- invite-source -->
-            
           </div>
-
           
+        </div>
 
-          
-        </div><!-- invite-method -->
+        
 
-      
-      </div><!-- public-instance-method-details -->
+        
+      </div>
+
     
-    </div><!-- 5Buntitled-5D -->
+    </section>
   
+  </section>
+</main>
 
-  </div><!-- documentation -->
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
-  </div>
-
-</body>
-</html>
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
 
