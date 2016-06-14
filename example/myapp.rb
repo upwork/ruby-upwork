@@ -6,7 +6,6 @@ $LOAD_PATH << File.dirname(__FILE__)
 
 require 'upwork/api'
 require 'upwork/api/routers/auth'
-require 'upwork/api/routers/mc'
 require 'upwork/api/routers/reports/time'
 require 'upwork/api/routers/freelancers/search'
 #require 'pry'
@@ -39,17 +38,10 @@ end
 auth = Upwork::Api::Routers::Auth.new(client)
 info = auth.get_user_info
 
-# work with mc
-mc = Upwork::Api::Routers::Mc.new(client)
-mc_response = mc.get_trays
- 
-# mark the thread
-#response = mc.mark_thread 'username', '88888', {'read' => 'false'}
-
 report = Upwork::Api::Routers::Reports::Time.new(client)
 report_response = report.get_by_freelancer_limited('mnovozhilov', {'tqx' => 'out:json', 'tq' => "select task where worked_on >= '2014-06-01' AND worked_on <= '2014-06-03' order by worked_on"})
 
-p info['info']['portrait_32_img'], mc_response['trays'], report_response
+p info['info']['portrait_32_img'], report_response
 
 params = {'q' => 'python'}
 freelancers = Upwork::Api::Routers::Freelancers::Search.new(client)

@@ -5,7 +5,7 @@ require 'test/unit'
 require 'mocha/test_unit'
 
 class ConfigTest < Test::Unit::TestCase
-  def test_config_initialization
+  def test_my_config_initialization
     config = Upwork::Api::Config.new({
       'consumer_key'    => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
       'consumer_secret' => 'xxxxxxxxxxxxxxxx',
