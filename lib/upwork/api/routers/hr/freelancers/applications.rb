@@ -35,7 +35,7 @@ module Upwork
             #  params: (Hash)
             def get_list(params = {})
               $LOG.i "running " + __method__.to_s
-              @client.get '/hr/v3/contractors/applications', params
+              @client.get '/hr/v4/contractors/applications', params
             end
             
             # Get specific application
@@ -44,7 +44,7 @@ module Upwork
             #  reference: (String)
             def get_specific(reference)
               $LOG.i "running " + __method__.to_s
-              @client.get '/hr/v3/contractors/applications' + reference
+              @client.get '/hr/v4/contractors/applications' + reference
             end
           end
         end
