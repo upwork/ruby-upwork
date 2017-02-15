@@ -199,7 +199,7 @@ href="Applications.html">Applications</a> API</p>
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/hr/clients/applications.rb, line 36</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_list</span>(<span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
-  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/hr/v3/clients/applications&#39;</span>, <span class="ruby-identifier">params</span>
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/hr/v4/clients/applications&#39;</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -238,7 +238,7 @@ params: (Hash)</pre>
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/hr/clients/applications.rb, line 46</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_specific</span>(<span class="ruby-identifier">reference</span>, <span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
-  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/hr/v3/clients/applications/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">reference</span>, <span class="ruby-identifier">params</span>
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/hr/v4/clients/applications/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">reference</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
