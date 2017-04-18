@@ -34,7 +34,7 @@ module Upwork
         #  params: (Hash)
         def submit_bonus(team_reference, params)
           $LOG.i "running " + __method__.to_s
-          @client.post '/hr/v2/teams/' + team_reference + '/adjustments', params
+          @client.post '/hr/v2/teams/#{team_reference}/adjustments', params
         end
       end
     end
