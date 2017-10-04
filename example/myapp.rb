@@ -26,6 +26,8 @@ client = Upwork::Api::Client.new(config)
 # and do not have an access token-secret pair
 if !config.access_token and !config.access_secret
   authz_url = client.get_authorization_url
+# for web-based applications you need to specify the exact oauth_callback explicitly
+# authz_url = client.get_authorization_url "https://my-callback-url-here.com"
 
   puts "Visit the authorization url and provide oauth_verifier for further authorization"
   puts authz_url

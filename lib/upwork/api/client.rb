@@ -41,7 +41,7 @@ module Upwork
       end
       
       # Start auth process and get authorization token
-      def get_authorization_url
+      def get_authorization_url(oauth_callback = "oob")
         $LOG.i "requesting autorization token"
         @consumer=OAuth::Consumer.new @config.consumer_key, 
                                       @config.consumer_secret, 
@@ -51,7 +51,7 @@ module Upwork
                                        :authorize_path      => URI_AUTH,
                                        :signature_method    => @config.signature_method}
         
-        @request_token = @consumer.get_request_token
+        @request_token = @consumer.get_request_token({:oauth_callback => oauth_callback})
         $LOG.i "got request token pair", @request_token
         
         $LOG.i "building authorization url, which is", @request_token.authorize_url
