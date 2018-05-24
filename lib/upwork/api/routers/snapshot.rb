@@ -27,39 +27,6 @@ module Upwork
           @client.epoint = ENTRY_POINT 
         end
         
-        # Get snapshot info
-        #
-        # Arguments:
-        #  company: (String)
-        #  username: (String)
-        #  ts: (String)
-        def get(company, username, ts)
-          $LOG.i "running " + __method__.to_s
-          @client.get '/team/v1/snapshots/' + company + '/' + username + '/' + ts
-        end
-        
-        # Update snapshot
-        #
-        # Arguments:
-        #  company: (String)
-        #  username: (String)
-        #  ts: (String)
-        #  params: (Hash)
-        def update(company, username, ts, params)
-          $LOG.i "running " + __method__.to_s
-          @client.put '/team/v1/snapshots/' + company + '/' + username + '/' + ts, params
-        end
-        
-        # Delete snapshot
-        # Arguments:
-        #  company: (String)
-        #  username: (String)
-        #  ts: (String)
-        def delete(company, username, ts)
-          $LOG.i "running " + __method__.to_s
-          @client.delete '/team/v1/snapshots/' + company + '/' + username + '/' + ts
-        end
-        
         # Get snapshot info by specific contract
         #
         # Arguments:
@@ -67,7 +34,7 @@ module Upwork
         #  ts: (String)
         def get_by_contract(contract, ts)
           $LOG.i "running " + __method__.to_s
-          @client.get '/team/v2/snapshots/contracts/' + contract + '/' + ts
+          @client.get '/team/v3/snapshots/contracts/' + contract + '/' + ts
         end
         
         # Update snapshot by specific contract
@@ -78,7 +45,7 @@ module Upwork
         #  params: (Hash)
         def update_by_contract(contract, ts, params)
           $LOG.i "running " + __method__.to_s
-          @client.put '/team/v2/snapshots/contracts/' + contract + '/' + ts, params
+          @client.put '/team/v3/snapshots/contracts/' + contract + '/' + ts, params
         end
         
         # Delete snapshot by specific contract
@@ -87,7 +54,7 @@ module Upwork
         #  ts: (String)
         def delete_by_contract(contract, ts)
           $LOG.i "running " + __method__.to_s
-          @client.delete '/team/v2/snapshots/contracts/' + contract + '/' + ts
+          @client.delete '/team/v3/snapshots/contracts/' + contract + '/' + ts
         end
       end
     end

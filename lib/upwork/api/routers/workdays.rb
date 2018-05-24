@@ -35,7 +35,7 @@ module Upwork
         #  params: (Hash)
         def get_by_company(company, from_date, till_date, params = {})
           $LOG.i "running " + __method__.to_s
-          @client.get '/team/v2/workdays/companies/' + company + '/' + from_date + ',' + till_date, params
+          @client.get '/team/v3/workdays/companies/' + company + '/' + from_date + ',' + till_date, params
         end
         
         # Get Workdays by Contract
@@ -46,7 +46,7 @@ module Upwork
         #  params: (Hash)
         def get_by_contract(contract, from_date, till_date, params = {})
           $LOG.i "running " + __method__.to_s
-          @client.get '/team/v2/workdays/contracts/' + contract + '/' + from_date + ',' + till_date, params
+          @client.get '/team/v3/workdays/contracts/' + contract + '/' + from_date + ',' + till_date, params
         end
       end
     end
