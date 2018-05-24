@@ -11,7 +11,7 @@ class WorkdiaryTest < Test::Unit::TestCase
   
   def test_get
     api = Upwork::Api::Routers::Workdiary.new(get_client_mock)
-    assert api.get('company', 'username', '20140101', {})
+    assert api.get('company', '20140101', {})
   end
   
   def test_get_by_contract
