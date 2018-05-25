@@ -1,9 +1,8 @@
 language: ruby
 script: rake
 rvm:
-  - 2.0.0
-  - 2.1.0
   - 2.3.0
+  - 2.5.1
   - ruby-head
 install: gem install oauth test-unit mocha
 matrix:
