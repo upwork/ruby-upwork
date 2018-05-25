@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>Rakefile - RDoc Documentation</title>
+<title>CHANGES - RDoc Documentation</title>
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
@@ -52,6 +52,15 @@
   </div>
 
   
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-Release+History">Release History</a>
+    <li><a href="#label-1.3.0">1.3.0</a>
+  </ul>
+</div>
+
 
   <div id="project-metadata">
     <div id="fileindex-section" class="nav-section">
@@ -77,22 +86,16 @@
   </div>
 </nav>
 
-<main role="main" aria-label="Page Rakefile">
+<main role="main" aria-label="Page CHANGES.md">
 
-<p>%w[rubygems rake rake/clean rake/testtask fileutils].each { |f| require f }
-$LOAD_PATH &lt;&lt; File.dirname(__FILE__) + &#39;/lib&#39; require
-&#39;bundler/gem_tasks&#39; require &#39;oauth&#39;</p>
+<h1 id="label-Release+History">Release History<span><a href="#label-Release+History">&para;</a> <a href="#top">&uarr;</a></span></h1>
 
-<p>Rake::TestTask.new do |t|</p>
-
-<pre class="ruby"><span class="ruby-identifier">t</span>.<span class="ruby-identifier">libs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;test&quot;</span>
-<span class="ruby-identifier">t</span>.<span class="ruby-identifier">test_files</span> = <span class="ruby-constant">FileList</span>[<span class="ruby-string">&#39;test/*test_*.rb&#39;</span>]
-<span class="ruby-identifier">t</span>.<span class="ruby-identifier">verbose</span> = <span class="ruby-keyword">true</span>
-</pre>
-
-<p>end</p>
-
-<p>task :default =&gt; :test</p>
+<h2 id="label-1.3.0">1.3.0<span><a href="#label-1.3.0">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Stop supporting deprecated Teamrooms API</p>
+</li><li>
+<p>Migrate Workdiaries, Workdays and Snapshots API to v3</p>
+</li></ul>
 </main>
 
 

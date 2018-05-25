@@ -8,6 +8,7 @@
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../../../../";
+  var index_rel_prefix = "../../../../";
 </script>
 
 <script src="../../../../js/jquery.js"></script>
@@ -102,8 +103,6 @@
   </section>
 
   
-  
-  
   <section id="5Buntitled-5D" class="documentation-section">
     
 
@@ -158,7 +157,7 @@
           
           <div class="method-source-code" id="new-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/reports/time.rb, line 26</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">client</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">client</span>)
   <span class="ruby-ivar">@client</span> = <span class="ruby-identifier">client</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">epoint</span> = <span class="ruby-constant">ENTRY_POINT</span> 
 <span class="ruby-keyword">end</span></pre>
@@ -206,7 +205,7 @@ params: (Hash)</pre>
           
           <div class="method-source-code" id="get_by_agency-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/reports/time.rb, line 59</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_by_agency</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">agency</span>, <span class="ruby-identifier">params</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_by_agency</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">agency</span>, <span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-identifier">get_by_type</span>(<span class="ruby-identifier">company</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">agency</span>, <span class="ruby-identifier">params</span>, <span class="ruby-keyword">false</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -245,7 +244,7 @@ params: (Hash)</pre>
           
           <div class="method-source-code" id="get_by_company-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/reports/time.rb, line 69</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_by_company</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">params</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_by_company</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-identifier">get_by_type</span>(<span class="ruby-identifier">company</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">params</span>, <span class="ruby-keyword">false</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -285,7 +284,7 @@ params: (Hash)</pre>
           
           <div class="method-source-code" id="get_by_freelancer_full-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/reports/time.rb, line 89</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_by_freelancer_full</span>(<span class="ruby-identifier">freelancer_id</span>, <span class="ruby-identifier">params</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_by_freelancer_full</span>(<span class="ruby-identifier">freelancer_id</span>, <span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/timereports/v1/providers/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">freelancer_id</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
@@ -325,7 +324,7 @@ params: (Hash)</pre>
           
           <div class="method-source-code" id="get_by_freelancer_limited-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/reports/time.rb, line 79</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_by_freelancer_limited</span>(<span class="ruby-identifier">freelancer_id</span>, <span class="ruby-identifier">params</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_by_freelancer_limited</span>(<span class="ruby-identifier">freelancer_id</span>, <span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/timereports/v1/providers/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">freelancer_id</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/hours&#39;</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
@@ -366,7 +365,7 @@ params: (Hash)</pre>
           
           <div class="method-source-code" id="get_by_team_full-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/reports/time.rb, line 37</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_by_team_full</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">team</span>, <span class="ruby-identifier">params</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_by_team_full</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">team</span>, <span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-identifier">get_by_type</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">team</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">params</span>, <span class="ruby-keyword">false</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -407,7 +406,7 @@ params: (Hash)</pre>
           
           <div class="method-source-code" id="get_by_team_limited-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/reports/time.rb, line 48</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_by_team_limited</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">team</span>, <span class="ruby-identifier">params</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_by_team_limited</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">team</span>, <span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-identifier">get_by_type</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">team</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">params</span>, <span class="ruby-keyword">true</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -428,8 +427,8 @@ params: (Hash)</pre>
 
 
 <footer id="validator-badges" role="contentinfo">
-  <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

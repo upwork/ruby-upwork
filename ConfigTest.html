@@ -8,6 +8,7 @@
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
 </script>
 
 <script src="./js/jquery.js"></script>
@@ -109,8 +110,6 @@
   </section>
 
   
-  
-  
   <section id="5Buntitled-5D" class="documentation-section">
     
 
@@ -147,13 +146,13 @@
           
           <div class="method-source-code" id="test_config_initialization-source">
             <pre><span class="ruby-comment"># File test/test_client.rb, line 14</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_config_initialization</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">test_config_initialization</span>
   <span class="ruby-identifier">config</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Config</span>.<span class="ruby-identifier">new</span>({
-    <span class="ruby-string">&#39;consumer_key&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;</span>,
-    <span class="ruby-string">&#39;consumer_secret&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxx&#39;</span>,
-    <span class="ruby-string">&#39;access_token&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;</span>,
-    <span class="ruby-string">&#39;access_secret&#39;</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxx&#39;</span>,
-    <span class="ruby-string">&#39;debug&#39;</span>           =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-string">&#39;consumer_key&#39;</span>    <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;</span>,
+    <span class="ruby-string">&#39;consumer_secret&#39;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxx&#39;</span>,
+    <span class="ruby-string">&#39;access_token&#39;</span>    <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;</span>,
+    <span class="ruby-string">&#39;access_secret&#39;</span>   <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxx&#39;</span>,
+    <span class="ruby-string">&#39;debug&#39;</span>           <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">false</span>
   })
   
   <span class="ruby-identifier">client</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">config</span>)
@@ -194,7 +193,7 @@
           
           <div class="method-source-code" id="test_delete-source">
             <pre><span class="ruby-comment"># File test/test_client.rb, line 44</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_delete</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">test_delete</span>
   <span class="ruby-identifier">assert</span> <span class="ruby-identifier">get_client_mock</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;/some/api/url&#39;</span>, {})
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -227,7 +226,7 @@
           
           <div class="method-source-code" id="test_get-source">
             <pre><span class="ruby-comment"># File test/test_client.rb, line 32</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">test_get</span>
   <span class="ruby-identifier">assert</span> <span class="ruby-identifier">get_client_mock</span>.<span class="ruby-identifier">get</span>(<span class="ruby-string">&#39;/some/api/url&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -260,14 +259,14 @@
           
           <div class="method-source-code" id="test_my_config_initialization-source">
             <pre><span class="ruby-comment"># File test/test_config.rb, line 8</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_my_config_initialization</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">test_my_config_initialization</span>
   <span class="ruby-identifier">config</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Config</span>.<span class="ruby-identifier">new</span>({
-    <span class="ruby-string">&#39;consumer_key&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;</span>,
-    <span class="ruby-string">&#39;consumer_secret&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxx&#39;</span>,
-    <span class="ruby-string">&#39;access_token&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;</span>,
-    <span class="ruby-string">&#39;access_secret&#39;</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxx&#39;</span>,
-    <span class="ruby-string">&#39;signature_method&#39;</span>=<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;sig&#39;</span>,
-    <span class="ruby-string">&#39;debug&#39;</span>           =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-string">&#39;consumer_key&#39;</span>    <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;</span>,
+    <span class="ruby-string">&#39;consumer_secret&#39;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxx&#39;</span>,
+    <span class="ruby-string">&#39;access_token&#39;</span>    <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;</span>,
+    <span class="ruby-string">&#39;access_secret&#39;</span>   <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxx&#39;</span>,
+    <span class="ruby-string">&#39;signature_method&#39;</span><span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;sig&#39;</span>,
+    <span class="ruby-string">&#39;debug&#39;</span>           <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">false</span>
   })
   
   <span class="ruby-identifier">assert_equal</span> <span class="ruby-string">&#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;</span>,<span class="ruby-identifier">config</span>.<span class="ruby-identifier">consumer_key</span>
@@ -307,7 +306,7 @@
           
           <div class="method-source-code" id="test_post-source">
             <pre><span class="ruby-comment"># File test/test_client.rb, line 36</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_post</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">test_post</span>
   <span class="ruby-identifier">assert</span> <span class="ruby-identifier">get_client_mock</span>.<span class="ruby-identifier">post</span>(<span class="ruby-string">&#39;/some/api/url&#39;</span>, {})
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -340,7 +339,7 @@
           
           <div class="method-source-code" id="test_put-source">
             <pre><span class="ruby-comment"># File test/test_client.rb, line 40</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_put</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">test_put</span>
   <span class="ruby-identifier">assert</span> <span class="ruby-identifier">get_client_mock</span>.<span class="ruby-identifier">put</span>(<span class="ruby-string">&#39;/some/api/url&#39;</span>, {})
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -360,8 +359,8 @@
 
 
 <footer id="validator-badges" role="contentinfo">
-  <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

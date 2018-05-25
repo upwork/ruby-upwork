@@ -8,6 +8,7 @@
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
 </script>
 
 <script src="./js/jquery.js"></script>
@@ -107,8 +108,6 @@
   </section>
 
   
-  
-  
   <section id="5Buntitled-5D" class="documentation-section">
     
 
@@ -145,7 +144,7 @@
           
           <div class="method-source-code" id="test_-source">
             <pre><span class="ruby-comment"># File test/test_hr_jobs.rb, line 17</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">test_</span>
   <span class="ruby-identifier">api</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Routers</span><span class="ruby-operator">::</span><span class="ruby-constant">Hr</span><span class="ruby-operator">::</span><span class="ruby-constant">Jobs</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">get_client_mock</span>)
   <span class="ruby-identifier">assert</span> <span class="ruby-identifier">api</span>.<span class="ruby-identifier">get_specific</span>(<span class="ruby-string">&#39;key&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -179,7 +178,7 @@
           
           <div class="method-source-code" id="test_delete_job-source">
             <pre><span class="ruby-comment"># File test/test_hr_jobs.rb, line 32</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_delete_job</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">test_delete_job</span>
   <span class="ruby-identifier">api</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Routers</span><span class="ruby-operator">::</span><span class="ruby-constant">Hr</span><span class="ruby-operator">::</span><span class="ruby-constant">Jobs</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">get_client_mock</span>)
   <span class="ruby-identifier">assert</span> <span class="ruby-identifier">api</span>.<span class="ruby-identifier">delete_job</span>(<span class="ruby-string">&#39;key&#39;</span>, {})
 <span class="ruby-keyword">end</span></pre>
@@ -213,7 +212,7 @@
           
           <div class="method-source-code" id="test_edit_job-source">
             <pre><span class="ruby-comment"># File test/test_hr_jobs.rb, line 27</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_edit_job</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">test_edit_job</span>
   <span class="ruby-identifier">api</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Routers</span><span class="ruby-operator">::</span><span class="ruby-constant">Hr</span><span class="ruby-operator">::</span><span class="ruby-constant">Jobs</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">get_client_mock</span>)
   <span class="ruby-identifier">assert</span> <span class="ruby-identifier">api</span>.<span class="ruby-identifier">edit_job</span>(<span class="ruby-string">&#39;key&#39;</span>, {})
 <span class="ruby-keyword">end</span></pre>
@@ -247,7 +246,7 @@
           
           <div class="method-source-code" id="test_list-source">
             <pre><span class="ruby-comment"># File test/test_hr_jobs.rb, line 12</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_list</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">test_list</span>
   <span class="ruby-identifier">api</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Routers</span><span class="ruby-operator">::</span><span class="ruby-constant">Hr</span><span class="ruby-operator">::</span><span class="ruby-constant">Jobs</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">get_client_mock</span>)
   <span class="ruby-identifier">assert</span> <span class="ruby-identifier">api</span>.<span class="ruby-identifier">get_list</span>({})
 <span class="ruby-keyword">end</span></pre>
@@ -281,7 +280,7 @@
           
           <div class="method-source-code" id="test_post_job-source">
             <pre><span class="ruby-comment"># File test/test_hr_jobs.rb, line 22</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_post_job</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">test_post_job</span>
   <span class="ruby-identifier">api</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">Routers</span><span class="ruby-operator">::</span><span class="ruby-constant">Hr</span><span class="ruby-operator">::</span><span class="ruby-constant">Jobs</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">get_client_mock</span>)
   <span class="ruby-identifier">assert</span> <span class="ruby-identifier">api</span>.<span class="ruby-identifier">post_job</span>({})
 <span class="ruby-keyword">end</span></pre>
@@ -302,8 +301,8 @@
 
 
 <footer id="validator-badges" role="contentinfo">
-  <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

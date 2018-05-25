@@ -8,6 +8,7 @@
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../../../../";
+  var index_rel_prefix = "../../../../";
 </script>
 
 <script src="../../../../js/jquery.js"></script>
@@ -99,8 +100,6 @@ href="../Organization.html">Organization</a></p>
   </section>
 
   
-  
-  
   <section id="5Buntitled-5D" class="documentation-section">
     
 
@@ -155,7 +154,7 @@ href="../Organization.html">Organization</a></p>
           
           <div class="method-source-code" id="new-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/organization/companies.rb, line 26</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">client</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">client</span>)
   <span class="ruby-ivar">@client</span> = <span class="ruby-identifier">client</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">epoint</span> = <span class="ruby-constant">ENTRY_POINT</span>
 <span class="ruby-keyword">end</span></pre>
@@ -197,7 +196,7 @@ href="../Organization.html">Organization</a></p>
           
           <div class="method-source-code" id="get_list-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/organization/companies.rb, line 32</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_list</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_list</span>
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/hr/v2/companies&#39;</span>
 <span class="ruby-keyword">end</span></pre>
@@ -235,7 +234,7 @@ href="../Organization.html">Organization</a></p>
           
           <div class="method-source-code" id="get_specific-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/organization/companies.rb, line 41</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_specific</span>(<span class="ruby-identifier">company_reference</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_specific</span>(<span class="ruby-identifier">company_reference</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/hr/v2/companies/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">company_reference</span>
 <span class="ruby-keyword">end</span></pre>
@@ -273,7 +272,7 @@ href="../Organization.html">Organization</a></p>
           
           <div class="method-source-code" id="get_teams-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/organization/companies.rb, line 50</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_teams</span>(<span class="ruby-identifier">company_reference</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_teams</span>(<span class="ruby-identifier">company_reference</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/hr/v2/companies/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">company_reference</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/teams&#39;</span>
 <span class="ruby-keyword">end</span></pre>
@@ -311,7 +310,7 @@ href="../Organization.html">Organization</a></p>
           
           <div class="method-source-code" id="get_users-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/organization/companies.rb, line 59</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_users</span>(<span class="ruby-identifier">company_reference</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_users</span>(<span class="ruby-identifier">company_reference</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/hr/v2/companies/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">company_reference</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/users&#39;</span>
 <span class="ruby-keyword">end</span></pre>
@@ -332,8 +331,8 @@ href="../Organization.html">Organization</a></p>
 
 
 <footer id="validator-badges" role="contentinfo">
-  <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

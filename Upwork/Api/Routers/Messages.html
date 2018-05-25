@@ -8,6 +8,7 @@
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../../../";
+  var index_rel_prefix = "../../../";
 </script>
 
 <script src="../../../js/jquery.js"></script>
@@ -106,8 +107,6 @@
   </section>
 
   
-  
-  
   <section id="5Buntitled-5D" class="documentation-section">
     
 
@@ -162,7 +161,7 @@
           
           <div class="method-source-code" id="new-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/messages.rb, line 24</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">client</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">client</span>)
   <span class="ruby-ivar">@client</span> = <span class="ruby-identifier">client</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">epoint</span> = <span class="ruby-constant">ENTRY_POINT</span> 
 <span class="ruby-keyword">end</span></pre>
@@ -209,7 +208,7 @@ params: (Hash)</pre>
           
           <div class="method-source-code" id="create_room-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/messages.rb, line 88</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_room</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">params</span> = {})
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_room</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">params</span> = {})
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">post</span> <span class="ruby-string">&#39;/messages/v3/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">company</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/rooms&#39;</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
@@ -249,7 +248,7 @@ params: (Hash)</pre>
           
           <div class="method-source-code" id="get_room_by_application-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/messages.rb, line 67</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_room_by_application</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">application_id</span>, <span class="ruby-identifier">params</span> = {})
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_room_by_application</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">application_id</span>, <span class="ruby-identifier">params</span> = {})
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/messages/v3/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">company</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/rooms/applications/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">application_id</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
@@ -289,7 +288,7 @@ params: (Hash)</pre>
           
           <div class="method-source-code" id="get_room_by_contract-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/messages.rb, line 78</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_room_by_contract</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">contract_id</span>, <span class="ruby-identifier">params</span> = {})
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_room_by_contract</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">contract_id</span>, <span class="ruby-identifier">params</span> = {})
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/messages/v3/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">company</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/rooms/contracts/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">contract_id</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
@@ -329,7 +328,7 @@ params: (Hash)</pre>
           
           <div class="method-source-code" id="get_room_by_offer-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/messages.rb, line 56</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_room_by_offer</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">offer_id</span>, <span class="ruby-identifier">params</span> = {})
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_room_by_offer</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">offer_id</span>, <span class="ruby-identifier">params</span> = {})
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/messages/v3/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">company</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/rooms/offers/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">offer_id</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
@@ -369,7 +368,7 @@ params: (Hash)</pre>
           
           <div class="method-source-code" id="get_room_details-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/messages.rb, line 45</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_room_details</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">room_id</span>, <span class="ruby-identifier">params</span> = {})
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_room_details</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">room_id</span>, <span class="ruby-identifier">params</span> = {})
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/messages/v3/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">company</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/rooms/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">room_id</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
@@ -408,7 +407,7 @@ params: (Hash)</pre>
           
           <div class="method-source-code" id="get_rooms-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/messages.rb, line 34</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_rooms</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">params</span> = {})
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_rooms</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">params</span> = {})
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/messages/v3/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">company</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/rooms&#39;</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
@@ -448,7 +447,7 @@ params: (Hash)</pre>
           
           <div class="method-source-code" id="send_message_to_room-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/messages.rb, line 99</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">send_message_to_room</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">room_id</span>, <span class="ruby-identifier">params</span> = {})
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">send_message_to_room</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">room_id</span>, <span class="ruby-identifier">params</span> = {})
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">post</span> <span class="ruby-string">&#39;/messages/v3/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">company</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/rooms/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">room_id</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/stories&#39;</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
@@ -488,7 +487,7 @@ params: (Hash)</pre>
           
           <div class="method-source-code" id="update_room_metadata-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/messages.rb, line 122</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_room_metadata</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">room_id</span>, <span class="ruby-identifier">params</span> = {})
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update_room_metadata</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">room_id</span>, <span class="ruby-identifier">params</span> = {})
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">put</span> <span class="ruby-string">&#39;/messages/v3/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">company</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/rooms/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">room_id</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
@@ -529,7 +528,7 @@ params: (Hash)</pre>
           
           <div class="method-source-code" id="update_room_settings-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/messages.rb, line 111</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_room_settings</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">room_id</span>, <span class="ruby-identifier">username</span>, <span class="ruby-identifier">params</span> = {})
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update_room_settings</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">room_id</span>, <span class="ruby-identifier">username</span>, <span class="ruby-identifier">params</span> = {})
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">put</span> <span class="ruby-string">&#39;/messages/v3/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">company</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/rooms/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">room_id</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/users/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">username</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
@@ -550,8 +549,8 @@ params: (Hash)</pre>
 
 
 <footer id="validator-badges" role="contentinfo">
-  <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

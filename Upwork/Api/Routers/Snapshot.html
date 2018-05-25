@@ -8,6 +8,7 @@
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../../../";
+  var index_rel_prefix = "../../../";
 </script>
 
 <script src="../../../js/jquery.js"></script>
@@ -72,15 +73,9 @@
     
     <li ><a href="#method-c-new">::new</a>
     
-    <li ><a href="#method-i-delete">#delete</a>
-    
     <li ><a href="#method-i-delete_by_contract">#delete_by_contract</a>
     
-    <li ><a href="#method-i-get">#get</a>
-    
     <li ><a href="#method-i-get_by_contract">#get_by_contract</a>
-    
-    <li ><a href="#method-i-update">#update</a>
     
     <li ><a href="#method-i-update_by_contract">#update_by_contract</a>
     
@@ -101,8 +96,6 @@
 
   </section>
 
-  
-  
   
   <section id="5Buntitled-5D" class="documentation-section">
     
@@ -158,7 +151,7 @@
           
           <div class="method-source-code" id="new-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/snapshot.rb, line 25</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">client</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">client</span>)
   <span class="ruby-ivar">@client</span> = <span class="ruby-identifier">client</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">epoint</span> = <span class="ruby-constant">ENTRY_POINT</span> 
 <span class="ruby-keyword">end</span></pre>
@@ -178,44 +171,6 @@
        <header>
          <h3>Public Instance Methods</h3>
        </header>
-
-    
-      <div id="method-i-delete" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">delete</span><span
-            class="method-args">(company, username, ts)</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>Delete snapshot Arguments:</p>
-
-<pre>company: (String)
-username: (String)
-ts: (String)</pre>
-          
-          
-
-          
-          <div class="method-source-code" id="delete-source">
-            <pre><span class="ruby-comment"># File lib/upwork/api/routers/snapshot.rb, line 58</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">username</span>, <span class="ruby-identifier">ts</span>)
-  <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
-  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">delete</span> <span class="ruby-string">&#39;/team/v1/snapshots/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">company</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">username</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">ts</span>
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-
-        
-      </div>
 
     
       <div id="method-i-delete_by_contract" class="method-detail ">
@@ -240,50 +195,10 @@ ts: (String)</pre>
 
           
           <div class="method-source-code" id="delete_by_contract-source">
-            <pre><span class="ruby-comment"># File lib/upwork/api/routers/snapshot.rb, line 88</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_by_contract</span>(<span class="ruby-identifier">contract</span>, <span class="ruby-identifier">ts</span>)
+            <pre><span class="ruby-comment"># File lib/upwork/api/routers/snapshot.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">delete_by_contract</span>(<span class="ruby-identifier">contract</span>, <span class="ruby-identifier">ts</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
-  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">delete</span> <span class="ruby-string">&#39;/team/v2/snapshots/contracts/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">contract</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">ts</span>
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-get" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">get</span><span
-            class="method-args">(company, username, ts)</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>Get snapshot info</p>
-
-<p>Arguments:</p>
-
-<pre>company: (String)
-username: (String)
-ts: (String)</pre>
-          
-          
-
-          
-          <div class="method-source-code" id="get-source">
-            <pre><span class="ruby-comment"># File lib/upwork/api/routers/snapshot.rb, line 36</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">username</span>, <span class="ruby-identifier">ts</span>)
-  <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
-  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/team/v1/snapshots/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">company</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">username</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">ts</span>
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">delete</span> <span class="ruby-string">&#39;/team/v3/snapshots/contracts/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">contract</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">ts</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -319,51 +234,10 @@ ts: (String)</pre>
 
           
           <div class="method-source-code" id="get_by_contract-source">
-            <pre><span class="ruby-comment"># File lib/upwork/api/routers/snapshot.rb, line 68</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_by_contract</span>(<span class="ruby-identifier">contract</span>, <span class="ruby-identifier">ts</span>)
+            <pre><span class="ruby-comment"># File lib/upwork/api/routers/snapshot.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_by_contract</span>(<span class="ruby-identifier">contract</span>, <span class="ruby-identifier">ts</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
-  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/team/v2/snapshots/contracts/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">contract</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">ts</span>
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-update" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">update</span><span
-            class="method-args">(company, username, ts, params)</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>Update snapshot</p>
-
-<p>Arguments:</p>
-
-<pre>company: (String)
-username: (String)
-ts: (String)
-params: (Hash)</pre>
-          
-          
-
-          
-          <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File lib/upwork/api/routers/snapshot.rb, line 48</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>(<span class="ruby-identifier">company</span>, <span class="ruby-identifier">username</span>, <span class="ruby-identifier">ts</span>, <span class="ruby-identifier">params</span>)
-  <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
-  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">put</span> <span class="ruby-string">&#39;/team/v1/snapshots/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">company</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">username</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">ts</span>, <span class="ruby-identifier">params</span>
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/team/v3/snapshots/contracts/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">contract</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">ts</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -400,10 +274,10 @@ params: (Hash)</pre>
 
           
           <div class="method-source-code" id="update_by_contract-source">
-            <pre><span class="ruby-comment"># File lib/upwork/api/routers/snapshot.rb, line 79</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_by_contract</span>(<span class="ruby-identifier">contract</span>, <span class="ruby-identifier">ts</span>, <span class="ruby-identifier">params</span>)
+            <pre><span class="ruby-comment"># File lib/upwork/api/routers/snapshot.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update_by_contract</span>(<span class="ruby-identifier">contract</span>, <span class="ruby-identifier">ts</span>, <span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
-  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">put</span> <span class="ruby-string">&#39;/team/v2/snapshots/contracts/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">contract</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">ts</span>, <span class="ruby-identifier">params</span>
+  <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">put</span> <span class="ruby-string">&#39;/team/v3/snapshots/contracts/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">contract</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">ts</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -422,8 +296,8 @@ params: (Hash)</pre>
 
 
 <footer id="validator-badges" role="contentinfo">
-  <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

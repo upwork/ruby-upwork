@@ -8,6 +8,7 @@
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
 </script>
 
 <script src="../../js/jquery.js"></script>
@@ -101,8 +102,6 @@
 
   </section>
 
-  
-  
   
   <section id="5Buntitled-5D" class="documentation-section">
     
@@ -238,7 +237,7 @@
           
           <div class="method-source-code" id="new-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/client.rb, line 36</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">config</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">config</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span>(<span class="ruby-string">&#39;initializing client&#39;</span>)
   <span class="ruby-ivar">@config</span> = <span class="ruby-identifier">config</span>
   <span class="ruby-ivar">@epoint</span> = <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">DEFAULT_EPOINT</span>
@@ -287,7 +286,7 @@ param: (Hash)</pre>
           
           <div class="method-source-code" id="delete-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/client.rb, line 109</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">params</span> = {})
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">delete</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">params</span> = {})
   <span class="ruby-identifier">send_request</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-value">:delete</span>, <span class="ruby-identifier">params</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -325,7 +324,7 @@ param: (Hash)</pre>
           
           <div class="method-source-code" id="get-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/client.rb, line 82</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">params</span> = {})
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">params</span> = {})
   <span class="ruby-identifier">send_request</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-value">:get</span>, <span class="ruby-identifier">params</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -362,9 +361,9 @@ param: (Hash)</pre>
           
           <div class="method-source-code" id="get_access_token-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/client.rb, line 65</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_access_token</span>(<span class="ruby-identifier">verifier</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_access_token</span>(<span class="ruby-identifier">verifier</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;getting access token pair&quot;</span>
-  <span class="ruby-ivar">@access_token</span> = <span class="ruby-ivar">@request_token</span>.<span class="ruby-identifier">get_access_token</span>(<span class="ruby-value">:oauth_verifier</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">verifier</span>)
+  <span class="ruby-ivar">@access_token</span> = <span class="ruby-ivar">@request_token</span>.<span class="ruby-identifier">get_access_token</span>(<span class="ruby-value">:oauth_verifier</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">verifier</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;got access token pair&quot;</span>, <span class="ruby-ivar">@access_token</span>
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;save access token data in config object&quot;</span>
   
@@ -387,7 +386,7 @@ param: (Hash)</pre>
         
         <div class="method-heading">
           <span class="method-name">get_authorization_url</span><span
-            class="method-args">()</span>
+            class="method-args">(oauth_callback = &quot;oob&quot;)</span>
           
           <span class="method-click-advice">click to toggle source</span>
           
@@ -403,17 +402,17 @@ param: (Hash)</pre>
           
           <div class="method-source-code" id="get_authorization_url-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/client.rb, line 44</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_authorization_url</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_authorization_url</span>(<span class="ruby-identifier">oauth_callback</span> = <span class="ruby-string">&quot;oob&quot;</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;requesting autorization token&quot;</span>
   <span class="ruby-ivar">@consumer</span>=<span class="ruby-constant">OAuth</span><span class="ruby-operator">::</span><span class="ruby-constant">Consumer</span>.<span class="ruby-identifier">new</span> <span class="ruby-ivar">@config</span>.<span class="ruby-identifier">consumer_key</span>, 
                                 <span class="ruby-ivar">@config</span>.<span class="ruby-identifier">consumer_secret</span>, 
-                                {<span class="ruby-value">:site</span>                =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">BASE_HOST</span>,
-                                 <span class="ruby-value">:request_token_path</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">DEFAULT_EPOINT</span> <span class="ruby-operator">+</span> <span class="ruby-constant">URI_RTOKEN</span>,
-                                 <span class="ruby-value">:access_token_path</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">DEFAULT_EPOINT</span> <span class="ruby-operator">+</span> <span class="ruby-constant">URI_ATOKEN</span>,
-                                 <span class="ruby-value">:authorize_path</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">URI_AUTH</span>,
-                                 <span class="ruby-value">:signature_method</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@config</span>.<span class="ruby-identifier">signature_method</span>}
+                                {<span class="ruby-value">:site</span>                <span class="ruby-operator">=&gt;</span> <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">BASE_HOST</span>,
+                                 <span class="ruby-value">:request_token_path</span>  <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">DEFAULT_EPOINT</span> <span class="ruby-operator">+</span> <span class="ruby-constant">URI_RTOKEN</span>,
+                                 <span class="ruby-value">:access_token_path</span>   <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Upwork</span><span class="ruby-operator">::</span><span class="ruby-constant">Api</span><span class="ruby-operator">::</span><span class="ruby-constant">DEFAULT_EPOINT</span> <span class="ruby-operator">+</span> <span class="ruby-constant">URI_ATOKEN</span>,
+                                 <span class="ruby-value">:authorize_path</span>      <span class="ruby-operator">=&gt;</span> <span class="ruby-constant">URI_AUTH</span>,
+                                 <span class="ruby-value">:signature_method</span>    <span class="ruby-operator">=&gt;</span> <span class="ruby-ivar">@config</span>.<span class="ruby-identifier">signature_method</span>}
   
-  <span class="ruby-ivar">@request_token</span> = <span class="ruby-ivar">@consumer</span>.<span class="ruby-identifier">get_request_token</span>
+  <span class="ruby-ivar">@request_token</span> = <span class="ruby-ivar">@consumer</span>.<span class="ruby-identifier">get_request_token</span>({<span class="ruby-value">:oauth_callback</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">oauth_callback</span>})
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;got request token pair&quot;</span>, <span class="ruby-ivar">@request_token</span>
   
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;building authorization url, which is&quot;</span>, <span class="ruby-ivar">@request_token</span>.<span class="ruby-identifier">authorize_url</span>
@@ -454,7 +453,7 @@ param: (Hash)</pre>
           
           <div class="method-source-code" id="post-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/client.rb, line 91</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">post</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">params</span> = {})
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">post</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">params</span> = {})
   <span class="ruby-identifier">send_request</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-value">:post</span>, <span class="ruby-identifier">params</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -492,7 +491,7 @@ param: (Hash)</pre>
           
           <div class="method-source-code" id="put-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/client.rb, line 100</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">put</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">params</span> = {})
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">put</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">params</span> = {})
   <span class="ruby-identifier">send_request</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-value">:put</span>, <span class="ruby-identifier">params</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -512,8 +511,8 @@ param: (Hash)</pre>
 
 
 <footer id="validator-badges" role="contentinfo">
-  <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

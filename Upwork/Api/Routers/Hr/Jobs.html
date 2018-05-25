@@ -8,6 +8,7 @@
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "../../../../";
+  var index_rel_prefix = "../../../../";
 </script>
 
 <script src="../../../../js/jquery.js"></script>
@@ -100,8 +101,6 @@
   </section>
 
   
-  
-  
   <section id="5Buntitled-5D" class="documentation-section">
     
 
@@ -156,7 +155,7 @@
           
           <div class="method-source-code" id="new-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/hr/jobs.rb, line 26</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">client</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">client</span>)
   <span class="ruby-ivar">@client</span> = <span class="ruby-identifier">client</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">epoint</span> = <span class="ruby-constant">ENTRY_POINT</span> 
 <span class="ruby-keyword">end</span></pre>
@@ -202,7 +201,7 @@
           
           <div class="method-source-code" id="delete_job-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/hr/jobs.rb, line 71</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_job</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">params</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">delete_job</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">delete</span> <span class="ruby-string">&#39;/hr/v2/jobs/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">key</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
@@ -240,7 +239,7 @@
           
           <div class="method-source-code" id="edit_job-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/hr/jobs.rb, line 62</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit_job</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">params</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">edit_job</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">put</span> <span class="ruby-string">&#39;/hr/v2/jobs/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">key</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
@@ -278,7 +277,7 @@
           
           <div class="method-source-code" id="get_list-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/hr/jobs.rb, line 35</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_list</span>(<span class="ruby-identifier">params</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_list</span>(<span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/hr/v2/jobs&#39;</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
@@ -316,7 +315,7 @@
           
           <div class="method-source-code" id="get_specific-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/hr/jobs.rb, line 44</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_specific</span>(<span class="ruby-identifier">key</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_specific</span>(<span class="ruby-identifier">key</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">get</span> <span class="ruby-string">&#39;/hr/v2/jobs/&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">key</span>
 <span class="ruby-keyword">end</span></pre>
@@ -354,7 +353,7 @@
           
           <div class="method-source-code" id="post_job-source">
             <pre><span class="ruby-comment"># File lib/upwork/api/routers/hr/jobs.rb, line 53</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">post_job</span>(<span class="ruby-identifier">params</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">post_job</span>(<span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">i</span> <span class="ruby-string">&quot;running &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__method__</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">post</span> <span class="ruby-string">&#39;/hr/v2/jobs&#39;</span>, <span class="ruby-identifier">params</span>
 <span class="ruby-keyword">end</span></pre>
@@ -375,8 +374,8 @@
 
 
 <footer id="validator-badges" role="contentinfo">
-  <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 
