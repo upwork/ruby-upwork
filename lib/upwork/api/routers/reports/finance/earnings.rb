@@ -39,26 +39,6 @@ module Upwork
               @client.get '/finreports/v2/providers/' + freelancer_reference + '/earnings', params
             end
             
-            # Generate Earning Reports for a Specific Freelancer's Team
-            #
-            # Arguments:
-            #  freelancer_team_reference: (String)
-            #  params: (Hash)
-            def get_by_freelancers_team(freelancer_team_reference, params)
-              $LOG.i "running " + __method__.to_s
-              @client.get '/finreports/v2/provider_teams/' + freelancer_team_reference + '/earnings', params
-            end
-            
-            # Generate Earning Reports for a Specific Freelancer's Company
-            #
-            # Arguments:
-            #  freelancer_company_reference: (String)
-            #  params: (Hash)
-            def get_by_freelancers_company(freelancer_company_reference, params)
-              $LOG.i "running " + __method__.to_s
-              @client.get '/finreports/v2/provider_companies/' + freelancer_company_reference + '/earnings', params
-            end
-            
             # Generate Earning Reports for a Specific Buyer's Team
             #
             # Arguments:
