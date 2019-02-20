@@ -1,5 +1,8 @@
 # Release History
 
+## 1.3.2
+* Fix the broken URL in assign method of Activities API
+
 ## 1.3.1
 * Fix assign_to_engagement - parameters are not sent
 
