@@ -44,7 +44,7 @@ module Upwork
           #  engagement: (String)
           #  params: (Hash)
           def assign(company, team, engagement, params)
-            @client.put '/otask/v1/tasks/companies/' + company + '/' + team + '/engagements/' + engagement, params
+            @client.put '/otask/v1/tasks/companies/' + company + '/teams/' + team + '/engagements/' + engagement + '/tasks', params
           end
 
           # Assign to specific engagement the list of activities
