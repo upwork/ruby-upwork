@@ -1,5 +1,9 @@
 # Release History
 
+## 1.3.3
+* Add Specialties API
+* Add Skills V2 API
+
 ## 1.3.2
 * Fix the broken URL in assign method of Activities API
 

@@ -39,6 +39,18 @@ module Upwork
           @client.get '/profiles/v1/metadata/skills'
         end
         
+        # Get skills V2
+        def get_skills_v2(params)
+          $LOG.i "running " + __method__.to_s
+          @client.get '/profiles/v2/metadata/skills'
+        end
+
+        # Get specialties
+        def get_specialties
+          $LOG.i "running " + __method__.to_s
+          @client.get '/profiles/v1/metadata/specialties'
+        end
+
         # Get regions
         def get_regions
           $LOG.i "running " + __method__.to_s
