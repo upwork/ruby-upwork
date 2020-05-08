@@ -47,6 +47,17 @@ module Upwork
           @client.get '/messages/v3/' + company + '/rooms/' + room_id, params
         end
         
+        # Get messages from a specific room
+        #
+        # Arguments:
+        #  company: (String)
+	#  room_id: (String)
+        #  params: (Hash)
+        def get_room_messages(company, room_id, params = {})
+          $LOG.i "running " + __method__.to_s
+          @client.get '/messages/v3/' + company + '/rooms/' + room_id + '/stories', params
+        end
+        
         # Get a specific room by offer ID
         #
         # Arguments:
@@ -89,7 +100,7 @@ module Upwork
           $LOG.i "running " + __method__.to_s
           @client.post '/messages/v3/' + company + '/rooms', params
         end
-        
+
         # Send a message to a room
         #
         # Arguments:
@@ -100,7 +111,7 @@ module Upwork
           $LOG.i "running " + __method__.to_s
           @client.post '/messages/v3/' + company + '/rooms/' + room_id + '/stories', params
         end
-        
+
         # Update a room settings
         #
         # Arguments:
