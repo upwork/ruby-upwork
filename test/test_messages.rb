@@ -19,6 +19,11 @@ class MessagesTest < Test::Unit::TestCase
     assert api.get_room_details('company', 'room-id', {})
   end
   
+  def test_get_room_messages
+    api = Upwork::Api::Routers::Messages.new(get_client_mock)
+    assert api.get_room_messages('company', 'room-id', {})
+  end
+  
   def test_get_room_by_offer
     api = Upwork::Api::Routers::Messages.new(get_client_mock)
     assert api.get_room_by_offer('company', '1234', {})
