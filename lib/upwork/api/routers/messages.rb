@@ -57,7 +57,7 @@ module Upwork
           $LOG.i "running " + __method__.to_s
           @client.get '/messages/v3/' + company + '/rooms/' + room_id + '/stories', params
         end
-        
+
         # Get a specific room by offer ID
         #
         # Arguments:
