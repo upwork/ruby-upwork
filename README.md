@@ -1,7 +1,7 @@
-Ruby bindings for Upwork API
+Ruby bindings for Upwork API (OAuth1)
 ============
 
-[![License](http://img.shields.io/packagist/l/upwork/php-upwork.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
+[![License](https://img.shields.io/github/license/upwork/ruby-upwork)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![Gem Version](https://badge.fury.io/rb/upwork-api.svg)](http://badge.fury.io/rb/upwork-api)
 [![GitHub release](https://img.shields.io/github/release/upwork/ruby-upwork.svg)](https://github.com/upwork/ruby-upwork/releases)
 [![Build Status](https://travis-ci.org/upwork/ruby-upwork.svg)](https://travis-ci.org/upwork/ruby-upwork)
