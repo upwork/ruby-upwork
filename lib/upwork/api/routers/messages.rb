@@ -112,6 +112,16 @@ module Upwork
           @client.post '/messages/v3/' + company + '/rooms/' + room_id + '/stories', params
         end
 
+        # Send a message to a batch of rooms
+        #
+        # Arguments:
+        #  company: (String)
+        #  params: (Hash)
+        def send_message_to_rooms(company, params = {})
+          $LOG.i "running " + __method__.to_s
+          @client.post '/messages/v3/' + company + '/stories/batch', params
+        end
+
         # Update a room settings
         #
         # Arguments:

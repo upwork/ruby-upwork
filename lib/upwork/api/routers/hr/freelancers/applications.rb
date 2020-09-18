@@ -44,7 +44,7 @@ module Upwork
             #  reference: (String)
             def get_specific(reference)
               $LOG.i "running " + __method__.to_s
-              @client.get '/hr/v4/contractors/applications' + reference
+              @client.get '/hr/v4/contractors/applications/' + reference
             end
           end
         end

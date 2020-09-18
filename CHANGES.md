@@ -1,5 +1,9 @@
 # Release History
 
+## 1.3.5
+* Send Message to a Batch of Rooms API
+* Bug fixes
+
 ## 1.3.4
 * Add Room Messages API
 

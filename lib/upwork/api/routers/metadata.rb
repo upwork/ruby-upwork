@@ -42,7 +42,7 @@ module Upwork
         # Get skills V2
         def get_skills_v2(params)
           $LOG.i "running " + __method__.to_s
-          @client.get '/profiles/v2/metadata/skills'
+          @client.get '/profiles/v2/metadata/skills', params
         end
 
         # Get specialties

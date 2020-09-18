@@ -48,6 +48,11 @@ class MessagesTest < Test::Unit::TestCase
     api = Upwork::Api::Routers::Messages.new(get_client_mock)
     assert api.send_message_to_room('company', 'room-id', {})
   end
+
+  def test_send_message_to_rooms
+    api = Upwork::Api::Routers::Messages.new(get_client_mock)
+    assert api.send_message_to_rooms('company', {})
+  end
   
   def test_update_room_settings
     api = Upwork::Api::Routers::Messages.new(get_client_mock)
