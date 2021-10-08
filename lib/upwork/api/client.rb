@@ -124,7 +124,7 @@ module Upwork
       
       # get url with parameters for get requests
       def get_url_with_params(path, params)
-        "#{path}?".concat(params.collect{|k,v| "#{k}=#{OAuth::Helper::escape(v.to_s)}"}.join("&"))
+        "#{path}?perf=1".concat(params.collect{|k,v| "#{k}=#{OAuth::Helper::escape(v.to_s)}"}.join("&"))
       end
       
       # Send request
