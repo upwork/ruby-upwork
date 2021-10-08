@@ -16,7 +16,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest]
-        ruby: [ '2.7.x', '2.6.x', '2.5.x' ]
+        ruby: [ '2.7.3', '2.6.7', '2.5.9' ]
 
     name: Ruby ${{ matrix.ruby }}
     steps:
