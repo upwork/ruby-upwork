@@ -1,4 +1,4 @@
-Ruby bindings for Upwork API (OAuth1)
+Ruby bindings for Upwork API (OAuth1) - DEPRECATED
 ============
 
 [![License](https://img.shields.io/github/license/upwork/ruby-upwork)](http://www.apache.org/licenses/LICENSE-2.0.html)
